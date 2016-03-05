@@ -4,20 +4,6 @@ from scrapy.selector import Selector
 from komiko.items import KomikoItem
 import urlparse
 
-'''
-list of manga:
-    one_piece
-    naruto
-    fairy_tail
-    hunter_x_hunter
-    bleach
-    detective_conan
-
-how to crawling (run it on terminal):
-    scrapy crawl mangacan -a manga=one_piece -a chapter=814
-    scrapy crawl mangacan -a manga=naruto -a chapter=700
-'''
-
 class KomikoSpider(Spider):
     name = "mangacan"
     def __init__(self, manga='', chapter=''):
